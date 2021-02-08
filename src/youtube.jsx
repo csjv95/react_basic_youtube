@@ -12,7 +12,7 @@ function App() {
       redirect: 'follow'
     };
     
-    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBFtWhYKei7L8SA-Hfy_-_oqZMfuT4S1G4", requestOptions)
+    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key={APIkey}", requestOptions)
       .then(response => response.json())
       .then(result =>setVideos(result.items))   // videos값을 업데이트 해준다 setVideos를 통해
       .catch(error => console.log('error', error));
