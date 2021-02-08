@@ -16,6 +16,13 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   * 업데이트된 videos값이 VideoList로 전달된다
   * VideoItem 값에 전달된다
 
+### step 2
+앞에서와 같이 화면에 title을 출력 해봤다면 다른 것도 어렵지 않습니다! fetch를 통해 받아온 데이터를 각각에 컴포넌트에 원하는 방식으로 보여주면 됩니다
+
+* Detail
+  * Youtube에서 받아온 props인 viedos의 데이터를 바탕으로 화면에 보여준다
+  * videos에 있는 snippet.(title, thumbnails, channelTitle...)등등 원하는데이터를 보여준다
+  * 계획한대로 css스타일링을 해준다
 
 ## Environment Variables
 .env

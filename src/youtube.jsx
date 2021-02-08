@@ -12,14 +12,15 @@ function App() {
       redirect: 'follow'
     };
     
-    fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key={youtubeKey}`, requestOptions)
+    fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBFtWhYKei7L8SA-Hfy_-_oqZMfuT4S1G4", requestOptions)
       .then(response => response.json())
-      .then(result => setVideos(result.items))   // videos값을 업데이트 해준다 setVideos를 통해
+      .then(result =>setVideos(result.items))   // videos값을 업데이트 해준다 setVideos를 통해
       .catch(error => console.log('error', error));
   },[])
 
   return (
-    <VideoList videos={videos} />
+    
+    <VideoList videos={videos} /> //videos.map(video => <ul key={video.id}><li ><h1>{video.snippet.title}</h1><span>{video.snippet.channelTitle}</span><p>{video.snippet.description}</p></li></ul>)
   );
 }
 export default App;
