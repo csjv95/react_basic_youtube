@@ -1,0 +1,47 @@
+.header {
+  margin-bottom: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a52a2a
+}
+
+.logo {
+  display: flex;
+  margin-right: 1em;
+}
+
+.img {
+  margin-right: 0.5em;
+}
+
+.title {
+  color: #ffffff;
+}
+
+.form {
+  height: 3em;
+  display: flex;
+  flex-basis: 50%;
+}
+
+.input {
+  margin-right: 0.5em;
+  padding-left: 0.5em;
+  flex-grow: 1;
+  font-size: 1.2em;
+}
+
+.search_btn {
+  background: linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+  background-color: #fe1a00;
+  border-radius: 0.5em;
+  border: 1px solid #d83526;
+}
+
+.btn_img {
+  width: 3em;
+  height: 100%;
+  padding: 0.5em;
+}
+
