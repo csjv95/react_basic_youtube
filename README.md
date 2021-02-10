@@ -2,6 +2,19 @@
 
 ## Youtube Search
 
+### step 1 
+fetch를 통해 get 방식으로 youtube 데이터를 가져와서  (youtube 데이터 안에 qury 키에 값은 우리가 검색하는 값으로 바꿔준다) videos에 담아 VideoList 컴포넌트를 업데이트 해준다
+
+  * Detail
+    
+    * Search 컴포넌트에서 inuput에 입력갑을 받아 button이 클릭되거나 'Enter'를 하면 작동하는 함수를 만든다
+    * input의 값을 받아와서 그 값을 porps의 onSearch에 값을 전달해준다
+    * onSearch는 qury란 매개변수를 가지고 있고 youtube API 데이터를 받아온다
+    * qury는 youtube api에서 `string q 매개변수는 검색할 검색어를 지정합니다`
+    * fetch에서 데이터를 받아올떄 q={검색어}로 받아 온다
+    * 받아온 데이터를 videos에 setVideos로 업데이트한다
+    * VideoList 컴포넌트가 다시 렌더링 된다
+
 ## Youtube list
 
 ### setp 1
