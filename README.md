@@ -37,5 +37,10 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   * videos에 있는 snippet.(title, thumbnails, channelTitle...)등등 원하는데이터를 보여준다
   * 계획한대로 css스타일링을 해준다
 
+
+## 문제점 
+  * 데이터를 받아올떄 비밀키가 그대로 노출되어 있다
+  * 앱 컴포넌트안에서 데이터를 받아오고 있다
+  
 ## Environment Variables
 .env

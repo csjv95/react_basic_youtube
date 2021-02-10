@@ -3,22 +3,18 @@ import Search from "./components/search/search";
 import VideoList from "./components/video__list/video__list";
 import "./youtube.css";
 
-function App() {
+function App(props) {
   const [videos, setVideos] = useState([]);
 
   const onSearch = (qury) => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${qury}&type=video&key=AIzaSyBFtWhYKei7L8SA-Hfy_-_oqZMfuT4S1G4`, requestOptions)
-      .then(response => response.json())
-      .then(result => result.items.map(item => ({...item, id : item.id.videoId})))  // key값이 객체인 search api가 중복되기 때문에 키값을 videoId로 덮어써준다 
-      .then(items => setVideos(items))  // setVideos에 업데이트하여 videos들을 렌더링 해준다
-      .catch(error => console.log('error', error));
-  }
-  
+    // console.log(props); // 이렇게 하면 콘솔에서 props 값을 보여줌
+    // console.log(props.youtube); //이렇게 하면 콘솔에서 props.youtube 값을 보여줌
+    // console.log(props.youtube.search(qury)); //분명히 props.youtube까지는 접근이 잘되는데 왜 그안에 있는 search는 안되지.. // 오류 메시지 TypeError: props.youtube.search is not a function // ?? search fuction 맞는데..
+     props.then(console.log); 
+    // props.youtube.then(console.log); //이건 아에안됨 // 오류 메세지 Cannot read property 'then' of undefined //then 정의?? 
+    // props.youtube.search(qury).then(console.log); // 오류 메시지 TypeError: props.youtube.search is not a function
+  };
+
   // When did mount
   useEffect(() => {
     const requestOptions = {
@@ -37,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Search onSearch={onSearch}/>    
+      <Search onSearch={onSearch} />
       <VideoList videos={videos} />
     </>
   );

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styles from "./search.module.css";
 
-
-
 const Search = (props) => {
   const [value, setValue] = useState("");
 
@@ -17,7 +15,7 @@ const Search = (props) => {
   
   const searchClick = (event) => {
     event.preventDefault(); // form event remvoe
-    setValue(''); // 검색하고 value값 초기화
+    // setValue(''); // 검색하고 value값 초기화
     handleSearch();
   };
 
