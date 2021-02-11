@@ -10,9 +10,9 @@ function App(props) {
     // console.log(props); // 이렇게 하면 콘솔에서 props 값을 보여줌
     // console.log(props.youtube); //이렇게 하면 콘솔에서 props.youtube 값을 보여줌
     // console.log(props.youtube.search(qury)); //분명히 props.youtube까지는 접근이 잘되는데 왜 그안에 있는 search는 안되지.. // 오류 메시지 TypeError: props.youtube.search is not a function // ?? search fuction 맞는데..
-     props.then(console.log); 
-    // props.youtube.then(console.log); //이건 아에안됨 // 오류 메세지 Cannot read property 'then' of undefined //then 정의?? 
-    // props.youtube.search(qury).then(console.log); // 오류 메시지 TypeError: props.youtube.search is not a function
+    // props.then(console.log); // 이방법은 나오지 않음... //오류 메세지TypeError: props.then is not a function
+    // props.youtube.then(console.log); // 오류 메세지 Cannot read property 'then' of undefined //then 정의??
+    props.then(console.log); // 오류 메시지 TypeError: props.youtube.search is not a function
   };
 
   // When did mount

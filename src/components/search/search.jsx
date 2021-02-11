@@ -12,7 +12,7 @@ const Search = (props) => {
     const searchValue = value;
     props.onSearch(searchValue);
   };
-  
+
   const searchClick = (event) => {
     event.preventDefault(); // form event remvoe
     // setValue(''); // 검색하고 value값 초기화
