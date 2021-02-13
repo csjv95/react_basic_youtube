@@ -14,17 +14,9 @@ const Search = (props) => {
   };
 
   const searchClick = (event) => {
-    event.preventDefault(); // form event remvoe
-    // setValue(''); // 검색하고 value값 초기화
+    event.preventDefault();
     handleSearch();
   };
-
-  // type = submit 으로 하면 enter 기능 내장
-  // const searchPress = (event) => {
-  //   if (event.key === "Enter") {
-  //     handleSearch();
-  //   }
-  // };
 
   return (
     <header className={styles.header}>
@@ -39,7 +31,6 @@ const Search = (props) => {
           type="search"
           value={value}
           onChange={onChange}
-          // onKeyPress={searchPress}
         />
         <button
           className={styles.search_btn}
