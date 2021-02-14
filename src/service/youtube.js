@@ -9,7 +9,7 @@ class Youtube {
 
   mostPopular() {
     return fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=24&key=${this.key}`,
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=4&key=${this.key}`,
       this.getRequestOptions
     )
       .then((response) => response.json())
@@ -18,7 +18,7 @@ class Youtube {
 
   search(qury) {
     return fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${qury}&type=video&key=${this.key}`,
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=${qury}&type=video&key=${this.key}`,
       this.getRequestOptions
     )
       .then((response) => response.json())
