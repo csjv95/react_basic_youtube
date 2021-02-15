@@ -56,3 +56,23 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   * 로직을 작성하고 index파일에 객체를 생성해준다
   * app에 youtube데이터를 주입해준다
   * 앱에서는 이제 보여주기만 한다
+
+
+## VideoDetail
+선택된 비디오의 데이터를 받아와서 VideoDetail 화면을 만들어준다
+
+### step :1
+ selectedVideo에 클릭된 item의 값을 담아준다 
+
+  * Detail
+    * 선택된 비디오가 어떤거인지 알수 있도록 selectedVideo변수에 setSelectedVideo를 이용해서 담아준다 
+    * 선택된 비디오의 데이터는 VideoLIst에 VideoItem의 값이다 
+    * VideoItem에 클릭 이벤트를 받아 끌어올려 setSelectedVideo에 넣어준다
+
+### step : 2
+  selectedVideo에 있는 데이터를 VideoDetail에 스타일링해서 보여준다
+
+  * Detail
+    * props로 VideoDtail에 selectedVido를 전달해준다
+    * 전달받은 props값으로 원하는 값을 사용하고 스타일링 해준다
+    * 동영상은 iframe을 사용하고 src="https://www.youtube.com/embed{비디오 아이디}"를 넣어준다
