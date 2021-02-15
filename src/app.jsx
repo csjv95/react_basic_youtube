@@ -13,7 +13,11 @@ function App({ youtube }) {
   };
 
   const onSearch = (qury) => {
-    youtube.search(qury).then((videos) => setVideos(videos));
+    setSelectedVideo(null);
+    youtube
+    .search(qury)
+    .then((videos) => setVideos(videos));
+    
   };
 
   useEffect(() => {
