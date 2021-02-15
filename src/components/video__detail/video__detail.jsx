@@ -4,15 +4,16 @@ import styles from "./video__detail.module.css";
 const VideoDetail = (props) => {
   return (
     <section className={styles.detail}>
-      <iframe className={styles.iframe}
+      <iframe 
+        className={styles.iframe}
         title={props.selectedVideo.id}
         id="ytplayer"
         type="text/html"
         width="720"
-        height="500"
-        src={`https://www.youtube.com/embed/${props.selectedVideo.id}?fs=1`}
-        frameborder="0"
-        allowfullscreen
+        height="500px"
+        src={`https://www.youtube.com/embed/${props.selectedVideo.id}`}
+        frameBorder="0"
+        allowFullScreen
       ></iframe>
       <h2 className={styles.title}>{props.selectedVideo.snippet.title}</h2>
       <div className={styles.line}></div>

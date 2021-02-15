@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./video__item.module.css";
 
-const VideoItem = (props) => {
+const VideoItem = memo((props) => {
   const displayType = props.display === "list" ? styles.list : styles.grid;
 
   const onClick = () => {
@@ -18,8 +18,8 @@ const VideoItem = (props) => {
         />
         <div className={styles.description}>
           <p className={styles.title}>
-            {props.video.snippet.title.length > 15
-              ? `${props.video.snippet.title.substring(0, 15)} ...`
+            {props.video.snippet.title.length > 14
+              ? `${props.video.snippet.title.substring(0, 14)} ...`
               : props.video.snippet.title}
           </p>
           <p className={styles.channel}>
@@ -31,6 +31,6 @@ const VideoItem = (props) => {
       </div>
     </li>
   );
-};
+});
 
 export default VideoItem;

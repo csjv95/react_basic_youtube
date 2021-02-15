@@ -27,3 +27,9 @@ a {
 .list{
   flex: 1 1 30%;
 }
+
+@media screen and (max-width : 48em) {
+  .content {
+    flex-direction: column;
+  }
+}

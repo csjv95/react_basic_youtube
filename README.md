@@ -87,3 +87,9 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   * Detail
     * selected비디오가 null이면 꽉찬 리스트 null이 아니면 작은 리스트로 보여주는 코드를 만들었다
     * 그러므로 search에 검색을 하기전 null로 초기화를 해도되고 하고난후 null로 값을 바꾸어 줘도 된다
+
+
+## 렌더링 최적화
+  memo와 useCallback을 사용하여 메모이제시션된 콜백을 반환하도록 합니다
+
+## fetch & axios
