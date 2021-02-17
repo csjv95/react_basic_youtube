@@ -1,4 +1,47 @@
-# Youtube 2
+# Youtube single page application
+React를 활용해서 youtube clone!
+
+<details>
+<summary>개요</summary>
+<div markdown="1">
+[1.About the project](#About-the-project)   
+[2.Screen Shots](#Screen-Shots)   
+[3.Skills](#Skills)  
+[4.Create App](#Create-App)   
+  * [4.1Youtube Search](#Youtube-Search)
+  * [4.2Youtube List](#Youtube-List)
+  * [4.3Video Detail](#Video-Detail)
+  * [4.4Return To List](#Return-To-List)   
+
+[5.fetch & axios](#fetch-&-axios)   
+[6.Acknowledgements](#Acknowledgements)   
+</div>
+</details></br> 
+
+# About the project
+React basic youtube clone
+* 검색을 하면 해당 검색어로 비디오 목록을 보여줍니다
+* 메인 화면은 youtube에서 인기있는 영상목록을 보여주고 클릭시 해당 영상의 video와 데이터를 보여줍니다 
+
+# Skills
+* HTML,CSS
+* ReactJS
+* fetch/axios
+
+# Screen Shots
+* Desktop
+  * main ![screenMain](public\images\screenMain.PNG)
+  * search ![screenSearch](public\images\screenSearch.PNG)
+  * click ![screenClick](public\images\screenClick.PNG)
+
+* Mobile
+  * main <img src="public\images\mobileMain.PNG" width="100%" height="100%" alt="mobileMain" />
+  * search  <img src="public\images\mobileSearch.PNG" width="100%" height="100%" alt="mobileSearch" />
+  * click1 <img src="public\images\mobileClick1.PNG" width="100%" height="100%" alt="mobileClick1" />
+  * click2 <img src="public\images\mobileClick2.PNG" width="100%" height="100%" alt="mobileClick2" />
+
+## Create App
+다음과 같이 앱을 제작
 
 ## Youtube Search
 
@@ -15,7 +58,7 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서  (youtube 데
     * 받아온 데이터를 videos에 setVideos로 업데이트한다
     * VideoList 컴포넌트가 다시 렌더링 된다
 
-## Youtube list
+## Youtube List
 
 ### setp 1
 fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담아 VideoList 컴포넌트에서 map을 활용하여 전달받은 props.videos를 VideoItem 컴포넌트에 video로 넘겨주어 렌더링을 한다
@@ -58,7 +101,7 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   * 앱에서는 이제 보여주기만 한다
 
 
-## VideoDetail
+## Video Detail
 선택된 비디오의 데이터를 받아와서 VideoDetail 화면을 만들어준다
 
 ### step 1
@@ -78,7 +121,7 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
     * 동영상은 iframe을 사용하고 src="https://www.youtube.com/embed{비디오 아이디}"를 넣어준다
 
 
-## 다시 목록으로 돌아가기 
+## Return To List
 비디오를 선택하고 나면 동영상과 데이터들이 왼쪽편에 보여지는데 검색을 해서 데이터를 받아오면 오른쪽 비디오 리스트들이 변화하는걸 볼수있다 이걸 다시 전체화면으로 바꾸어보자
 
 ### step 1 
@@ -93,3 +136,32 @@ fetch를 통해 get 방식으로 youtube 데이터를 가져와서 videos에 담
   memo와 useCallback을 사용하여 메모이제시션된 콜백을 반환하도록 합니다
 
 ## fetch & axios
+|제목|fetch|axios|
+|-------|------|------|
+|import|o|x|
+|구형 브라우저 지원|x|o|
+|json자동 변환|x|o|
+|return값이 Promise 객체|o|o|
+
+위와 같이 둘의 차이점과 공통점이 존재합니다
+
+* fetch
+  * fetch는 자바스크립트 내장 라이브러리 이기 때문에 import하지 않고 사용가능합니다
+  * fetch는 구형 브라우저를 지원 하지않습니다(internet explorer)
+  * fetch는 proimse값을 JSON으로 자동 변환 하지 않습니다
+  * fetch는 promise base입니다 
+  * React Native같은경우 업데이트가 잦은데 fetch는 라이브러리가 업데이트를 해도 잘 따라간다
+
+* axios
+  * axios는 사용할려면 반드시 import 해주어야 합니다
+  * axios는 XMLHttpRequest방식으로 구형 브라우저를 지원할 수 있게 해줍니다
+  * axios는 promise 값을 자동으로 JSON으로 변환 해줍니다
+  * axios는 promise base입니다 
+   * React Native같은경우 업데이트가 잦은데 axios는 라이브러리가 업데이트를 못 따라 가능 경우가 생긴다
+  * 요청을 중도 Cancel, 응답시간 초과 설정 등의 기능이 있다
+  * Error 발생시에 reject 로 response를 전달해 catch로 잡아낼 수 있다.
+
+# Acknowledgements
+* Youtube Data Api
+* Dream Coding
+* google

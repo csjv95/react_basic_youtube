@@ -24,11 +24,11 @@
 .description {
   width: 100%;
   margin: 0;
-  padding: 0 2em;
+  padding: 0 2em 2em;
 }
 
-@media screen (max-width : 48em) {
-  .iframe {
-    padding : 5em
+@media screen and (max-width : 48em) {
+  .description {
+    padding-bottom : 2em;
   }
 }
