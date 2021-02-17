@@ -65,11 +65,12 @@
 
   .input {
     width: 1em;
-    font-size: 0.5em;
+    font-size: 1em;
   }
   
   .search_btn {
     margin-left: 1em;
+    padding: 0 1em;
   }
 
 }

@@ -10,7 +10,7 @@ const VideoItem = memo((props) => {
 
   return (
     <li className={`${styles.container} `} onClick={onClick}> {/*${displayType}`*/}
-      <div className={styles.video}>
+      <div className={styles.video} onClick={()=> window.scrollTo(0,0)}>
         <img
           className={styles.thumbnail}
           src={props.video.snippet.thumbnails.medium.url}
