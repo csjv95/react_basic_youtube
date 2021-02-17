@@ -18,18 +18,26 @@ a {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.bestVideo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .detail {
-  flex: 1 1 70%;
+  flex: 1 1 80%;
 }
 
 .list{
-  flex: 1 1 30%;
+  flex: 1 1 20%;
 }
 
 @media screen and (max-width : 48em) {
   .content {
     flex-direction: column;
+    padding: 0.5em;
   }
 }

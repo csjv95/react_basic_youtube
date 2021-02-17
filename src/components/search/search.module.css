@@ -23,6 +23,7 @@
   height: 3em;
   display: flex;
   flex-basis: 50%;
+
 }
 
 .input {
@@ -45,3 +46,26 @@
   padding: 0.5em;
 }
 
+@media screen and (max-width : 48em) {
+  .header {
+    margin-bottom: 1em;
+  }
+
+  .title {
+    font-size: 1em;
+  }
+
+  .form {
+    flex-basis: 70%;
+  }
+
+  .input {
+    width: 1em;
+    font-size: 0.5em;
+  }
+  
+  .search_btn {
+    margin-left: 1em;
+  }
+
+}

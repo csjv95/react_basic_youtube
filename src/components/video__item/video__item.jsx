@@ -2,14 +2,14 @@ import React, { memo } from "react";
 import styles from "./video__item.module.css";
 
 const VideoItem = memo((props) => {
-  const displayType = props.display === "list" ? styles.list : styles.grid;
+  // const displayType = props.display === "list" ? styles.list : styles.grid;
 
   const onClick = () => {
     props.selectedVideo(props.video);
   };
 
   return (
-    <li className={`${styles.container} ${displayType}`} onClick={onClick}>
+    <li className={`${styles.container} `} onClick={onClick}> {/*${displayType}`*/}
       <div className={styles.video}>
         <img
           className={styles.thumbnail}

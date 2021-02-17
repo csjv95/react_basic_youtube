@@ -9,7 +9,7 @@ const VideoDetail = (props) => {
         title={props.selectedVideo.id}
         id="ytplayer"
         type="text/html"
-        width="720"
+        width="720px"
         height="500px"
         src={`https://www.youtube.com/embed/${props.selectedVideo.id}`}
         frameBorder="0"
