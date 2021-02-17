@@ -3,8 +3,9 @@ React를 활용해서 youtube clone!
 
 <details>
 <summary>개요</summary>
-<div markdown="1">
-[1.About the project](#About-the-project)   
+<div markdown="1"> 
+   
+[1.About the project](#About-the-project)    
 [2.Screen Shots](#Screen-Shots)   
 [3.Skills](#Skills)  
 [4.Create App](#Create-App)   
