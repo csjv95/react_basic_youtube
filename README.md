@@ -30,9 +30,9 @@ React basic youtube clone
 
 # Screen Shots
 * Desktop
-  * main ![screenMain](public\images\screenMain.PNG)
-  * search ![screenSearch](public\images\screenSearch.PNG)
-  * click ![screenClick](public\images\screenClick.PNG)
+  * main <img src="public\images\screenMain.PNG" width="100%" height="100%" alt="screenMain" />
+   * search  <img src="public\images\screenSearch.PNG" width="100%" height="100%" alt="screenSearch" />
+   * click <img src="public\images\screenClick.PNG" width="100%" height="100%" alt="screenClick" />
 
 * Mobile
   * main <img src="public\images\mobileMain.PNG" width="100%" height="100%" alt="mobileMain" />
